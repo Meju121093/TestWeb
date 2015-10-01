@@ -10,7 +10,7 @@
 		 <!-- set global properties for this build -->
 		<property name="src" location="${destpath}/src"/>
 		<property name="build" location="${destpath}/build"/>
-		<property name="dist"  location="${destpath}/dist"/>
+		<property name="dist"  location="${destpath}/dist"/> 
 
 		 <property name="reports.dir" value="${destpath}/reports"/>
 		<property name="junit.jar" location="${cc.home}/lib/junit-4.4.jar"/>
