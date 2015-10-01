@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TestWeb" default="" basedir=".." xmlns:sonar="antlib:org.sonar.ant">
+    <description>Builds, tests, and runs the project TestWeb.</description>
+         <property file="build/cc.properties"/>
+
+
+        <property name="cc.lib" value="${cc.home}/Lib" />  
+        <property name="project.name" value="TestWeb" />
+		 <property name="base.dir" value="${destpath}" />
+		 <!-- set global properties for this build -->
+		<property name="src" location="${destpath}/src"/>
+		<property name="build" location="${destpath}/build"/>
+		<property name="dist"  location="${destpath}/dist"/>
+
+		 <property name="reports.dir" value="${destpath}/reports"/>
+		<property name="junit.jar" location="${cc.home}/lib/junit-4.4.jar"/>
+		<property name="test.class" value="com.hex.TestSample"/>
+
+      		
+        <!-- SDK and classpath info-->
+        <property name="starteam.lib" value="${starteam.home}/Lib" />
+        <property name="destdir" value="./classes" />
+        <property name="sturl" value="${stserver}:${stport}/${stproject}/${stview}" />
+        <property name="rootlocalfolder" value="${destpath}" />
+		<echo message="rootlocalfolder ${rootlocalfolder}"/>
+		<echo message="FindBugs Home ====> ${findbugs.home}"/>
+		<echo message="Ant Home ====> ${ANT_HOME}"/>
+
+				<!-- Define the SonarQube project properties -->
+		<property name="sonar.projectKey" value="TestWeb" />
+		<property name="sonar.projectName" value="TestWeb" />
+		<property name="sonar.projectVersion" value="1.0" />
+		<property name="sonar.language" value="java" />
+		<property name="sonar.sources" value="src" />
+		<property name="sonar.binaries" value="${build}"/>
+		<property name="sonar.jdbc.driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="sonar.jdbc.url" value="jdbc:mysql://localhost:3306/sonar" />
+        <property name="sonar.jdbc.username" value="root" />
+        <property name="sonar.jdbc.password" value="password123" />
+
+		<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+            <classpath>
+                <pathelement location="${cc.lib}/ant-contrib-1.0b3.jar" />
+                <pathelement location="${starteam.lib}/starteam110.jar" />
+                <pathelement location="${starteam.lib}/starteam110_win32.jar" />
+                <pathelement location="${starteam.lib}/starteam110-resources.jar" />
+            </classpath>
+        </taskdef>
+		
+		
+		<taskdef name="svn" classname="org.tigris.subversion.svnant.SvnTask" >
+			<classpath>
+                <pathelement location="${cc.lib}/svnant-1.3.jar" />
+				<pathelement location="${cc.lib}/svnClientAdapter-1.3.jar" />
+				<pathelement location="${cc.lib}/svnjavahl-1.6.0.jar" />
+            </classpath>
+        </taskdef>
+
+
+		<path id="library">
+			<fileset dir="${destpath}/WebContent/WEB-INF/lib">
+				<include name="*.jar"/>
+			 </fileset>
+			<pathelement location="${junit.jar}" />
+			<pathelement location="${build}"/>
+	   </path>
+
+
+<path id="hexcodeprop">
+<pathelement path="${destpath}"/>
+</path>
+
+	<path id="hexcodepath">
+			<fileset dir="${cc.home}/lib">
+					<include name="checkstyle-5.3-all.jar"/>
+					<include name="HexCodeVerifier.jar"/>
+					<include name="jakarta-regexp-1.3.jar"/>
+					<include name="jdtcore.jar"/>
+					<include name="ojdbc14.jar"/>
+
+				
+			 </fileset>
+			
+	   </path>
+
+		<path id="BuildFacesLib">
+		 <fileset dir="${cc.home}/lib">
+				<include name="ojdbc14.jar"/>
+				<include name="mysql-connector-java-5.0.4.jar"/>
+			 </fileset>
+		</path>
+
+        <target name="init">
+            <echo message="Initializing Variables for STARTEAM" />
+			<!-- Create the time stamp -->
+			<tstamp/>
+			<!-- Create the build directory structure used by compile -->
+			<mkdir dir="${build}"/>
+			<mkdir dir="${reports.dir}"/>
+			<mkdir dir="${dist}"/>
+        </target>
+
+		 <target name="compile" description="compile the source " depends="clean">
+			<!-- Compile the java code from ${src} into ${build} -->
+			<javac srcdir="${src}" destdir="${build}" debug="true" debuglevel="lines,vars,source">
+				<classpath refid="library"/>
+			</javac>
+			</target>
+
+
+		<!-- Define the SonarQube target -->
+		<target name="sonar">
+			<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+				<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+				<classpath path="${ANT_HOME}/lib/sonar-ant-task-*.jar" />
+			</taskdef>
+			<!-- Execute the SonarQube analysis -->
+			<sonar:sonar />
+		</target>
+
+
+		<target name="test"  description="unit test" >
+			<junit>
+			<classpath>
+				<path refid="library"/>
+			</classpath>
+			<test name="${test.class}" todir="${reports.dir}"/>
+			<formatter type="brief" usefile="false" />
+			<formatter type="xml"/>
+		 
+			</junit>
+			<junitreport todir="${reports.dir}">
+           <fileset dir="${reports.dir}" >
+                <include name="${reports.dir}/TEST-*.xml" />
+            </fileset>
+            <report styledir="${cc.home}/templates" format="noframes" todir="${reports.dir}"  />
+			 </junitreport>
+			<!--<xslt in="${reports.dir}/junit-report.xml" out="${reports.dir}/surefire-report.html"
+                style="${cc.home}/templates/junit-noframes.xsl"/>-->
+		</target>
+
+		<target name="jar" description="generate the distribution" >
+			<!-- Create the distribution directory -->
+			<mkdir dir="${dist}/lib"/>
+
+			<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+			<jar jarfile="${dist}/lib/TestWeb.jar" basedir="${build}"/>
+		</target>
+
+
+        <target name="list">
+            <record name="list.txt" action="start" append="no" />
+            <stlist url="${sturl}"
+                username="${stuser}" password="${stpassword}" excludes="*.htm,*.GIF,*.bmp,MAKE*"
+                rootlocalfolder="${basedir}"
+                rootstarteamfolder="${rootserverfolder}/${project.name}" recursive="true" />
+            <record name="list.txt" action="stop" />
+        </target>
+
+
+
+
+        <target name="checkout" >
+            <echo message="Checking out sources from StarTeam" />
+           <stcheckout servername="${stserver}" serverport="${stport}" projectname="${stproject}"
+                viewname="${stview}" username="${stuser}" password="${stpassword}"
+                createworkingdirs="true" recursive="true" rootlocalfolder="${rootlocalfolder}"
+                rootstarteamfolder="${rootserverfolder}/${project.name}" deleteuncontrolled="false" />
+				<!-- <svn username="${svnuser}" password="${svnpassword}">
+				<checkout url="${repourl}" revision="HEAD" destPath="${destpath}" />
+				</svn>-->
+        </target>
+
+
+        <taskdef resource="checkstyletask.properties" classpath="${checkstyle.home}/checkstyle-all-5.3.jar" />
+
+        <target name="checkstyle_java" description="Generates a report of code convention violations.">
+            <checkstyle config="${checkstyle.home}/CodingStandards_Java.xml" failureProperty="checkstyle.failure" failOnViolation="false">
+                <formatter type="xml" tofile="${destpath}/reports/checkstyle_sun_report.xml" />
+                <fileset dir="${destpath}/src" includes="**/*.java" excludes="**/*Action.java" />
+            </checkstyle>
+            <style in="${destpath}/reports/checkstyle_sun_report.xml" out="${destpath}/reports/checkstyle.html"
+                style="${checkstyle.home}/contrib/BuildFacesCSTemplate.xsl"/>
+            <!--mail from="dileepperumana@hexaware.com" tolist="senthamizhck@hexaware.com"
+                    mailhost="chn.mail.hexaware.com" mailport="25"
+                    user="${stuser}" password="${stpassword}" ssl="true"
+                    subject="Checkstyle violation(s) in project">
+                <fileset dir=".">
+                    <include name="**/*_report.html"/>
+                </fileset>
+            </mail-->
+        </target>
+       
+
+
+
+
+
+        <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+            classpath="${findbugs.home}/lib/findbugs-ant.jar" />
+         <target name="findbugs">
+            <findbugs home="${findbugs.home}"   output="xml:withMessages" outputFile="${destpath}/reports/findbugs.xml" sort="true">
+                <sourcePath path="./src/java" />
+                <class location="${destpath}/dist/lib/TestWeb.jar" />
+                <auxClasspath location="${destpath}/WebContent/WEB-INF/lib" />
+            </findbugs>
+        <style in="${destpath}/reports/findbugs.xml"  out="${destpath}/reports/findbugs.html"  style="${findbugs.home}/src/xsl/BuildFacesFBTemplate.xsl"/>
+        </target>
+    
+      <!--<target name="copy"> 
+          <copydir src="${cc.home}/ReportTemplate" dest="${basedir}"/>
+       </target>-->
+       
+
+    
+	<path id="pmd.lib"> 
+		<fileset dir="${pmd.home}\lib"> 
+            <include name="*.jar" /> 
+		</fileset> 
+		<!--pathelement location="${PMD.home}/lib/jaxen-1.1.1.jar" -->
+	</path> 
+
+       <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"> 
+			<classpath refid="pmd.lib" /> 
+		</taskdef>
+		
+	<target name="pmd">
+			<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.lib"    />
+			<echo>${pmd.home}/lib/pmd-5.0.4.jar</echo>
+			<pmd shortFilenames="true">
+			
+			<ruleset>rulesets/java/design.xml</ruleset>
+			
+			<formatter type="xml" toFile="${destpath}/reports/pmd.xml">
+				
+			</formatter>
+			<fileset dir="${src}">
+			            <include name="**/*.java"/>
+			 </fileset>
+			 </pmd>
+			  <xslt in="${destpath}/reports/pmd.xml" style="${pmd.home}/etc/xslt/BuildFacesPMDTemplate.xslt" out="${destpath}/reports/pmd.html" />
+		</target>
+
+
+	<path id="cpd.lib"> 
+		<fileset dir="${pmd.home}\lib"> 
+            <include name="*.jar" /> 
+
+		</fileset> 
+		
+	</path>
+
+       <taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask"> 
+			<classpath refid="cpd.lib" /> 
+		</taskdef>
+
+	<target name="cpd">
+    <taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask" classpathref="cpd.lib"/>
+    <cpd  minimumTokenCount="1" format="xml" outputFile="${destpath}/reports/cpd.xml">
+			
+				
+
+			
+        <fileset dir="${src}">
+            <include name="**/*.java"/>
+        </fileset>
+    </cpd>
+	<xslt in="${destpath}/reports/cpd.xml" style="${pmd.home}/etc/xslt/BuildFacesCPD.xslt" out="${destpath}/reports/cpd.html" />
+	</target>
+
+
+      
+      <!-- <target name="merge">
+          <xslt basedir="." in="checkstyle_sun_report.xml" destdir="." out="merged.xml"
+              extension=".xml" style="merge-checkstyle.xsl">
+            <param name="date" expression="07-01-2000"/>
+         </xslt>
+       </target>-->
+
+
+	<target name="timestamp">
+    <tstamp>
+        <format property="current.time"
+            pattern="yyyyMMdd-HHmm" />
+       
+    </tstamp>
+    <echo>${current.time}</echo>
+    
+</target>
+
+
+	   <!-- Ant custom plugin for BuildFaces -->
+	<target name="BuildMaintain" description="Custom Ant plugin for BuildFaces" depends="timestamp">
+		
+		<taskdef name="buildmaintain" classname="com.hex.buildafaces.antplugin.BuildMaintain" classpath="${cc.lib}/BuildMaintenanceAnt.jar" classpathref="BuildFacesLib"/>
+		
+        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}"/>
+    </target>
+      
+ <!-- Ant custom plugin for Deploy -->
+	<target name="deployfile" description="Custom Ant plugin for BuildFaces">
+			<copy file="E:/test/TestWeb/dist/lib/TestWeb.jar" todir="E:/apache-tomcat-7.0.5/webapps"/>
+    </target>
+
+
+       <target name="report">
+           <style in="checkstyle_sun_report.xml"  out="./checkstyle_report.html" style="${checkstyle.home}/contrib/checkstyle-author.xsl"/>
+       </target>
+      
+        <target name="clean">
+		   <!-- Delete the ${build} and ${dist} directory trees -->
+			
+			<delete dir="${build}/com"/>
+        </target>
+</project>
