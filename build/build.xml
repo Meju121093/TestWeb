@@ -9,7 +9,7 @@
 		 <property name="base.dir" value="${destpath}" />
 		 <!-- set global properties for this build -->
 		<property name="src" location="${destpath}/src"/>
-		<property name="build" location="${destpath}/build"/>
+		<property name="build" location="${destpath}/build"/> 
 		<property name="dist"  location="${destpath}/dist"/> 
 
 		 <property name="reports.dir" value="${destpath}/reports"/>
