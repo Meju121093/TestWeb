@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TestWeb" default="" basedir=".." xmlns:sonar="antlib:org.sonar.ant">
     <description>Builds, tests, and runs the project TestWeb.</description>
-         <property file="build/cc.properties"/>
+         <property file="cc.properties"/>
 
 
         <property name="cc.lib" value="${cc.home}/Lib" />  
@@ -11,10 +11,12 @@
 		<property name="src" location="${destpath}/src"/>
 		<property name="build" location="${destpath}/build"/> 
 		<property name="dist"  location="${destpath}/dist"/> 
+		
 
 		 <property name="reports.dir" value="${destpath}/reports"/>
 		<property name="junit.jar" location="${cc.home}/lib/junit-4.4.jar"/>
 		<property name="test.class" value="com.hex.TestSample"/>
+		
 
       		
         <!-- SDK and classpath info-->
@@ -294,10 +296,10 @@
 		
 		<taskdef name="buildmaintain" classname="com.hex.buildafaces.antplugin.BuildMaintain" classpath="${cc.lib}/BuildMaintenanceAnt.jar" classpathref="BuildFacesLib"/>
 		
-        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}"/>
+        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
     </target>
     	   <!-- Ant custom plugin for BuildFaces -->
-	<target name="BuildStatusChecker" description="Custom Ant plugin for BuildFaces" depends="compile">
+	<target name="BuildStatusChecker" description="Custom Ant plugin for BuildFaces" depends="timestamp">
 		
 		<taskdef name="BuildStatusChecker" classname="com.hex.buildfaces.antplugin.BuildStatusChecker" classpath="${cc.lib}/BuildStatusCheckerAnt.jar" classpathref="BuildFacesLib"/>
 		
