@@ -296,6 +296,13 @@
 		
         <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}"/>
     </target>
+    	   <!-- Ant custom plugin for BuildFaces -->
+	<target name="BuildStatusChecker" description="Custom Ant plugin for BuildFaces" depends="compile">
+		
+		<taskdef name="BuildStatusChecker" classname="com.hex.buildfaces.antplugin.BuildStatusChecker" classpath="${cc.lib}/BuildStatusCheckerAnt.jar" classpathref="BuildFacesLib"/>
+		
+        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}"/>
+    </target>
       
  <!-- Ant custom plugin for Deploy -->
 	<target name="deployfile" description="Custom Ant plugin for BuildFaces">
