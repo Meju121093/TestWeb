@@ -22,7 +22,7 @@
         <property name="destdir" value="./classes" />
         <property name="sturl" value="${stserver}:${stport}/${stproject}/${stview}" />
         <property name="rootlocalfolder" value="${destpath}" />
-		<echo message="rootlocalfolder ${rootlocalfolder}"/>
+		<echo message="rootlocalfolder ${rootlocalfolder}"/> 
 		<echo message="FindBugs Home ====> ${findbugs.home}"/>
 		<echo message="Ant Home ====> ${ANT_HOME}"/>
 
