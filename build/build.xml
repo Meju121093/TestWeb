@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TestWeb" default="" basedir=".." xmlns:sonar="antlib:org.sonar.ant">
     <description>Builds, tests, and runs the project TestWeb.</description>
-         <property file="cc.properties"/>
+         <property file="build/cc.properties"/>
 
 
         <property name="cc.lib" value="${cc.home}/Lib" />  
@@ -303,7 +303,7 @@
 		
 		<taskdef name="BuildStatusChecker" classname="com.hex.buildfaces.antplugin.BuildStatusChecker" classpath="${cc.lib}/BuildStatusCheckerAnt.jar" classpathref="BuildFacesLib"/>
 		
-        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}"/>
+        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
     </target>
       
  <!-- Ant custom plugin for Deploy -->
