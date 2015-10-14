@@ -17,7 +17,7 @@
 		
 
       		
-        <!-- SDK and classpath info-->
+        <!-- SDK and classpath info--> 
         <property name="starteam.lib" value="${starteam.home}/Lib" />
         <property name="destdir" value="./classes" />
         <property name="sturl" value="${stserver}:${stport}/${stproject}/${stview}" />
