@@ -4,7 +4,7 @@
          <property file="build/cc.properties"/>
 
   
-        <property name="cc.lib" value="${cc.home}/Lib" />  
+        <property name="cc.lib" value="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4/Lib" />  
         <property name="project.name" value="TestWeb" />
 		 <property name="base.dir" value="${destpath}" />
 		 <!-- set global properties for this build -->
@@ -12,19 +12,19 @@
 		<property name="build" location="${destpath}/build"/> 
 		<property name="dist"  location="${destpath}/dist"/> 
 		 <property name="reports.dir" value="${destpath}/reports"/>
-		<property name="junit.jar" location="${cc.home}/lib/junit-4.4.jar"/>
+		<property name="junit.jar" location="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4/lib/junit-4.4.jar"/>
 		<property name="test.class" value="com.hex.TestSample"/>
 		
 
       		
         <!-- SDK and classpath info--> 
-        <property name="starteam.lib" value="${starteam.home}/Lib" />
+        <property name="starteam.lib" value="C:/Program Files/Borland/StarTeam SDK 11.0/Lib" />
         <property name="destdir" value="./classes" />
         <property name="sturl" value="${stserver}:${stport}/${stproject}/${stview}" />
         <property name="rootlocalfolder" value="${destpath}" />
 		<echo message="rootlocalfolder ${rootlocalfolder}"/> 
 		<echo message="FindBugs Home ====> ${findbugs.home}"/>
-		<echo message="Ant Home ====> ${ANT_HOME}"/>
+		<echo message="Ant Home ====> C:/CodeAssure/apache-ant-1.7.0"/>
 
 				<!-- Define the SonarQube project properties -->
 		<property name="sonar.projectKey" value="TestWeb" />
@@ -40,7 +40,7 @@
 
 		<taskdef resource="net/sf/antcontrib/antcontrib.properties">
             <classpath>
-                <pathelement location="${cc.lib}/ant-contrib-1.0b3.jar" />
+                <pathelement location="E:\BuildFaces\CIT_Config\cruisecontrol-bin-2.8.4\lib/ant-contrib-1.0b3.jar" />
                 <pathelement location="${starteam.lib}/starteam110.jar" />
                 <pathelement location="${starteam.lib}/starteam110_win32.jar" />
                 <pathelement location="${starteam.lib}/starteam110-resources.jar" />
@@ -50,9 +50,9 @@
 		
 		<taskdef name="svn" classname="org.tigris.subversion.svnant.SvnTask" >
 			<classpath>
-                <pathelement location="${cc.lib}/svnant-1.3.jar" />
-				<pathelement location="${cc.lib}/svnClientAdapter-1.3.jar" />
-				<pathelement location="${cc.lib}/svnjavahl-1.6.0.jar" />
+                <pathelement location="E:\BuildFaces\CIT_Config\cruisecontrol-bin-2.8.4\lib/svnant-1.3.jar" />
+				<pathelement location="E:\BuildFaces\CIT_Config\cruisecontrol-bin-2.8.4\lib/svnClientAdapter-1.3.jar" />
+				<pathelement location="E:\BuildFaces\CIT_Config\cruisecontrol-bin-2.8.4\lib/svnjavahl-1.6.0.jar" />
             </classpath>
         </taskdef>
 
@@ -71,7 +71,7 @@
 </path>
 
 	<path id="hexcodepath">
-			<fileset dir="${cc.home}/lib">
+			<fileset dir="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4/lib">
 					<include name="checkstyle-5.3-all.jar"/>
 					<include name="HexCodeVerifier.jar"/>
 					<include name="jakarta-regexp-1.3.jar"/>
@@ -84,7 +84,7 @@
 	   </path>
 
 		<path id="BuildFacesLib">
-		 <fileset dir="${cc.home}/lib">
+		 <fileset dir="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4/lib">
 				<include name="ojdbc14.jar"/>
 				<include name="mysql-connector-java-5.0.4.jar"/>
 			 </fileset>
@@ -112,7 +112,7 @@
 		<target name="sonar">
 			<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
 				<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
-				<classpath path="${ANT_HOME}/lib/sonar-ant-task-*.jar" />
+				<classpath path="C:/CodeAssure/apache-ant-1.7.0/lib/sonar-ant-task-*.jar" />
 			</taskdef>
 			<!-- Execute the SonarQube analysis -->
 			<sonar:sonar />
@@ -133,10 +133,10 @@
            <fileset dir="${reports.dir}" >
                 <include name="${reports.dir}/TEST-*.xml" />
             </fileset>
-            <report styledir="${cc.home}/templates" format="noframes" todir="${reports.dir}"  />
+            <report styledir="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4/templates" format="noframes" todir="${reports.dir}"  />
 			 </junitreport>
 			<!--<xslt in="${reports.dir}/junit-report.xml" out="${reports.dir}/surefire-report.html"
-                style="${cc.home}/templates/junit-noframes.xsl"/>-->
+                style="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4/templates/junit-noframes.xsl"/>-->
 		</target>
 
 		<target name="jar" description="generate the distribution" >
@@ -208,7 +208,7 @@
         </target>
     
       <!--<target name="copy"> 
-          <copydir src="${cc.home}/ReportTemplate" dest="${basedir}"/>
+          <copydir src="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4/ReportTemplate" dest="${basedir}"/>
        </target>-->
        
 
@@ -292,16 +292,16 @@
 	   <!-- Ant custom plugin for BuildFaces -->
 	<target name="BuildMaintain" description="Custom Ant plugin for BuildFaces" depends="timestamp">
 		
-		<taskdef name="buildmaintain" classname="com.hex.buildafaces.antplugin.BuildMaintain" classpath="${cc.lib}/BuildMaintenanceAnt.jar" classpathref="BuildFacesLib"/>
+		<taskdef name="buildmaintain" classname="com.hex.buildafaces.antplugin.BuildMaintain" classpath="E:\BuildFaces\CIT_Config\cruisecontrol-bin-2.8.4\lib/BuildMaintenanceAnt.jar" classpathref="BuildFacesLib"/>
 		
-        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
+        <buildmaintain cithome="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
     </target>
     	   <!-- Ant custom plugin for BuildFaces -->
 	<target name="BuildStatusChecker" description="Custom Ant plugin for BuildFaces" depends="timestamp">
 		
-		<taskdef name="BuildStatusChecker" classname="com.hex.buildfaces.antplugin.BuildStatusChecker" classpath="${cc.lib}/BuildStatusCheckerAnt.jar" classpathref="BuildFacesLib"/>
+		<taskdef name="BuildStatusChecker" classname="com.hex.buildfaces.antplugin.BuildStatusChecker" classpath="E:\BuildFaces\CIT_Config\cruisecontrol-bin-2.8.4\lib/BuildStatusCheckerAnt.jar" classpathref="BuildFacesLib"/>
 		
-        <BuildStatusChecker cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
+        <BuildStatusChecker cithome="E:/BuildFaces/CIT_Config/cruisecontrol-bin-2.8.4" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
     </target>
       
  <!-- Ant custom plugin for Deploy -->
