@@ -267,7 +267,14 @@
     </cpd>
 	<xslt in="${destpath}/reports/cpd.xml" style="${pmd.home}/etc/xslt/BuildFacesCPD.xslt" out="${destpath}/reports/cpd.html" />
 	</target>
-
+	<target name="jsanalyse">
+		<echo>Inside info</echo>
+		<exec executable="cmd">
+			<arg value="/c" />
+			<arg value="batch_report.bat" />
+			<arg value="-o" />
+		</exec>
+	</target>
 
       
       <!-- <target name="merge">
