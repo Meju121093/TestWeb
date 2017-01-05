@@ -269,7 +269,7 @@
 	</target>
 	<target name="jsanalyse">
 		<echo>Inside info</echo>
-		 <replace file="batch_report.bat" token="htmlFile" value="test2"/>
+		 <replace file="batch_report.bat" token="htmlFile" value="${cc.home}/CustomBackup/${project.name}/${current.time}/jsLintReport.html"/>
 		<exec executable="cmd">
 			<arg value="/c" />
 			<arg value="batch_report.bat" />
