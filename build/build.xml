@@ -269,6 +269,7 @@
 	</target>
 	<target name="jsanalyse">
 		<echo>Inside info</echo>
+		 <replace file="batch_report.bat" token="htmlFile" value="test2"/>
 		<exec executable="cmd">
 			<arg value="/c" />
 			<arg value="batch_report.bat" />
