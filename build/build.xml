@@ -274,8 +274,9 @@
 			<arg value="/c" />
 			<arg value="batch_report.bat" />
 			<arg value="-o" />
-			<arg value="${destpath}/reports/jsLintReport.html"/>
+			<arg value="${destpath}/reports/jsLintReport.xml"/>
 		</exec>
+		<xslt in="${destpath}/reports/jsLintReport.xml" style="${cc.home}/templates/jslint.xslt" out="${destpath}/reports/jsLintReport.html" />
 	</target>
 
       
