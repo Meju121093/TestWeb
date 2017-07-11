@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.0.4" timestamp="2017-07-11T15:45:52.149">
+<file name="com\hex\HelloWorld.java">
+<violation beginline="7" endline="8" begincolumn="8" endcolumn="5" rule="UncommentedEmptyConstructor" ruleset="Design" package="com.hex" class="HelloWorld" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.4/rules/java/design.html#UncommentedEmptyConstructor" priority="3">
+Document empty constructor
+</violation>
+</file>
+<file name="com\hex\HelloWorldAction.java">
+<violation beginline="9" endline="10" begincolumn="8" endcolumn="5" rule="UncommentedEmptyConstructor" ruleset="Design" package="com.hex" class="HelloWorldAction" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.4/rules/java/design.html#UncommentedEmptyConstructor" priority="3">
+Document empty constructor
+</violation>
+</file>
+<file name="com\hex\Main.java">
+<violation beginline="11" endline="16" begincolumn="19" endcolumn="1" rule="UseSingleton" ruleset="Design" class="Main" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.4/rules/java/design.html#UseSingleton" priority="3">
+All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+</violation>
+</file>
+<file name="com\hex\TestServlet.java">
+<violation beginline="17" endline="17" begincolumn="22" endcolumn="37" rule="ImmutableField" ruleset="Design" package="com.hex" class="TestServlet" variable="serialVersionUID" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.4/rules/java/design.html#ImmutableField" priority="3">
+Private field 'serialVersionUID' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+</file>
+<error filename="com\hex\Test.java" msg="Error while processing com\hex\Test.java"/>
+</pmd>

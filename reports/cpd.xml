@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<pmd-cpd>
+<duplication lines="21" tokens="68">
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[public HelloWorld() { 
+    } 
+    public String execute() { 
+       setMessage("Hello " + getUserName()); 
+      return "SUCCESS"; 
+      } 
+
+   public String getMessage() { 
+      return message; 
+   } 
+
+   public void setMessage(String message) { 
+        this.message = message; 
+   } 
+   public  String getUserName() { 
+      return userName; 
+   } 
+   public void setUserName(String userName) { 
+        this.userName = userName; 
+   } 
+}]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="12">
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<codefragment><![CDATA[	public static void main(String args[])
+	{]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="9">
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[  public static void main(String args[]) {
+        Sample sample = new Sample();]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="8">
+<file line="3" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[public class HelloWorld { 
+    private String message; 
+   private String userName; 
+    
+public HelloWorld() { ]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="8">
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[	public static void main(String args[])
+	{
+		System.out.println("Main & main executed...");]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="7">
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[        Sample sample = new Sample();
+	System.out.println(sample.greet());]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="6">
+<file line="14" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[		System.out.println("Main & main executed...");]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="6">
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[	System.out.println(sample.greet());]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="5">
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[	System.out.println(sample.greet());
+  }
+}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="4">
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<codefragment><![CDATA[   public String getMessage() { 
+      return message; ]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="4">
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[   public void setMessage(String message) { 
+        this.message = message; ]]></codefragment>
+</duplication>
+<duplication lines="8" tokens="4">
+<file line="23" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="3">
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[public HelloWorld() { ]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="3">
+<file line="8" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[    } 
+    public String execute() { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="3">
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[       setMessage("Hello " + getUserName()); ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="3">
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[       setMessage("Hello " + getUserName()); ]]></codefragment>
+</duplication>
+<duplication lines="4" tokens="3">
+<file line="15" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="19" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="17" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[      return message; 
+   } 
+
+   public void setMessage(String message) { ]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="3">
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[   } 
+
+   public void setMessage(String message) { ]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="3">
+<file line="14" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[		System.out.println("Main & main executed...");
+	}
+}]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="3">
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[       public String greet(){]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="3">
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[                  while (tokenizer.hasMoreTokens()) {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="3" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="3" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public class HelloWorld { ]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="2">
+<file line="3" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public class HelloWorld { 
+    private String message; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[    private String message; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[    private String message; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[   private String userName; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public HelloWorld() { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public HelloWorld() { ]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="2">
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[public HelloWorld() { 
+    } ]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="2">
+<file line="8" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="8" path="E:\Testweb\src\com\hex\Sample.java"/>
+<codefragment><![CDATA[    } 
+    public String execute() { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<codefragment><![CDATA[    public String execute() { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[       setMessage("Hello " + getUserName()); ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[   public void setMessage(String message) { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[   public void setMessage(String message) { ]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="2">
+<file line="22" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="27" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[      return userName; 
+   } ]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="2">
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="28" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="15" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="13" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="13" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="39" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[   } 
+}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="2">
+<file line="11" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="3" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[public class Main {
+	public static void main(String args[])]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="2">
+<file line="14" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[		System.out.println("Main & main executed...");
+	}]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[        Sample sample = new Sample();]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="2">
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[	 public Thing(String startingActions) {  ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="3" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="3" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public class HelloWorld { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="3" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<codefragment><![CDATA[public class HelloWorld { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="3" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="13" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="3" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public class HelloWorld { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[    private String message; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="15" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="19" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="19" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="17" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[    private String message; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="17" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[   private String userName; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="5" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="27" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="27" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[   private String userName; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public HelloWorld() { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="7" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="6" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public HelloWorld() { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="8" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="23" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="27" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="28" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="29" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="15" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="8" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="13" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="13" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="32" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="39" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="41" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[    } ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="11" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="15" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="13" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="17" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Sample.java"/>
+<codefragment><![CDATA[      return "SUCCESS"; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="18" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="24" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="20" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="26" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[   public void setMessage(String message) { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="19" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="27" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="14" path="E:\Testweb\src\com\hex\Main.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[        this.message = message; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="19" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="25" path="E:\Testweb\src\com\hex\HelloWorld.java"/>
+<file line="21" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="27" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="17" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[        this.message = message; ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="4" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<file line="9" path="E:\Testweb\src\com\hex\HelloWorldAction.java"/>
+<codefragment><![CDATA[public class HelloWorldAction { ]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="3" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[public class Sample {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="11" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Sample.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<codefragment><![CDATA[        Sample sample = new Sample();]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="6" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="16" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[public class TestSample extends TestCase {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="11" path="E:\Testweb\src\com\hex\TestSample.java"/>
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[    assertEquals(sample.greet(), "Hello, world");]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="16" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="22" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[public class TestServlet extends HttpServlet {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="30" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="31" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<file line="37" path="E:\Testweb\src\com\hex\TestServlet.java"/>
+<codefragment><![CDATA[	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="5" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="7" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[public class Thing {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="6" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[	 private List actions;]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[                   StringTokenizer tokenizer = new StringTokenizer(startingActions);]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="1">
+<file line="10" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="11" path="E:\Testweb\src\com\hex\Thing.java"/>
+<file line="12" path="E:\Testweb\src\com\hex\Thing.java"/>
+<codefragment><![CDATA[                   StringTokenizer tokenizer = new StringTokenizer(startingActions);]]></codefragment>
+</duplication>
+</pmd-cpd>
