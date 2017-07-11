@@ -204,7 +204,7 @@
                 <class location="${destpath}/dist/lib/TestWeb.jar" />
                 <auxClasspath location="${destpath}/WebContent/WEB-INF/lib" />
             </findbugs>
-        <style in="${destpath}/reports/findbugs.xml"  out="${destpath}/reports/findbugs.html"  style="${findbugs.home}/src/xsl/fancy-hist.xsl"/>
+        <style in="${destpath}/reports/findbugs.xml"  out="${destpath}/reports/findbugs.html" style="${findbugs.home}/src/xsl/BuildFacesFBTemplate.xsl"/>
         </target>
     
       <!--<target name="copy"> 
