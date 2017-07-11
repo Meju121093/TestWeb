@@ -3,26 +3,26 @@
     <description>Builds, tests, and runs the project TestWeb.</description>
          <property file="build/cc.properties"/>
 
-  
+
         <property name="cc.lib" value="${cc.home}/Lib" />  
         <property name="project.name" value="TestWeb" />
 		 <property name="base.dir" value="${destpath}" />
 		 <!-- set global properties for this build -->
 		<property name="src" location="${destpath}/src"/>
-		<property name="build" location="${destpath}/build"/> 
-		<property name="dist"  location="${destpath}/dist"/> 
+		<property name="build" location="${destpath}/build"/>
+		<property name="dist"  location="${destpath}/dist"/>
+
 		 <property name="reports.dir" value="${destpath}/reports"/>
 		<property name="junit.jar" location="${cc.home}/lib/junit-4.4.jar"/>
 		<property name="test.class" value="com.hex.TestSample"/>
-		
 
       		
-        <!-- SDK and classpath info--> 
+        <!-- SDK and classpath info-->
         <property name="starteam.lib" value="${starteam.home}/Lib" />
         <property name="destdir" value="./classes" />
         <property name="sturl" value="${stserver}:${stport}/${stproject}/${stview}" />
         <property name="rootlocalfolder" value="${destpath}" />
-		<echo message="rootlocalfolder ${rootlocalfolder}"/> 
+		<echo message="rootlocalfolder ${rootlocalfolder}"/>
 		<echo message="FindBugs Home ====> ${findbugs.home}"/>
 		<echo message="Ant Home ====> ${ANT_HOME}"/>
 
@@ -32,11 +32,11 @@
 		<property name="sonar.projectVersion" value="1.0" />
 		<property name="sonar.language" value="java" />
 		<property name="sonar.sources" value="src" />
-		<property name="sonar.binaries" value="build"/>
+		<property name="sonar.binaries" value="${build}"/>
 		<property name="sonar.jdbc.driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="sonar.jdbc.url" value="jdbc:mysql://localhost:3306/sonar" />
         <property name="sonar.jdbc.username" value="root" />
-        <property name="sonar.jdbc.password" value="admin" />
+        <property name="sonar.jdbc.password" value="password123" />
 
 		<taskdef resource="net/sf/antcontrib/antcontrib.properties">
             <classpath>
@@ -196,7 +196,7 @@
 
 
 
-        <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+       <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
             classpath="${findbugs.home}/lib/findbugs-ant.jar" />
          <target name="findbugs">
             <findbugs home="${findbugs.home}"   output="xml:withMessages" outputFile="${destpath}/reports/findbugs.xml" sort="true">
@@ -204,7 +204,7 @@
                 <class location="${destpath}/dist/lib/TestWeb.jar" />
                 <auxClasspath location="${destpath}/WebContent/WEB-INF/lib" />
             </findbugs>
-        <style in="${destpath}/reports/findbugs.xml"  out="${destpath}/reports/findbugs.html"  style="${findbugs.home}/src/xsl/BuildFacesFBTemplate.xsl"/>
+        <style in="${destpath}/reports/findbugs.xml"  out="${destpath}/reports/findbugs.html"  style="${findbugs.home}/src/xsl/fancy-hist.xsl"/>
         </target>
     
       <!--<target name="copy"> 
@@ -267,17 +267,7 @@
     </cpd>
 	<xslt in="${destpath}/reports/cpd.xml" style="${pmd.home}/etc/xslt/BuildFacesCPD.xslt" out="${destpath}/reports/cpd.html" />
 	</target>
-	<target name="jsanalyse">
-		<echo>Inside info</echo>
-		
-		<exec executable="cmd">
-			<arg value="/c" />
-			<arg value="batch_report.bat" />
-			<arg value="-o" />
-			<arg value="${destpath}/reports/jsLintReport.xml"/>
-		</exec>
-		<xslt in="${destpath}/reports/jsLintReport.xml" style="${cc.home}/templates/jslint.xslt" out="${destpath}/reports/jsLintReport.html" />
-	</target>
+
 
       
       <!-- <target name="merge">
@@ -304,14 +294,7 @@
 		
 		<taskdef name="buildmaintain" classname="com.hex.buildafaces.antplugin.BuildMaintain" classpath="${cc.lib}/BuildMaintenanceAnt.jar" classpathref="BuildFacesLib"/>
 		
-        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
-    </target>
-    	   <!-- Ant custom plugin for BuildFaces -->
-	<target name="BuildStatusChecker" description="Custom Ant plugin for BuildFaces" depends="timestamp">
-		
-		<taskdef name="BuildStatusChecker" classname="com.hex.buildfaces.antplugin.BuildStatusChecker" classpath="${cc.lib}/BuildStatusCheckerAnt.jar" classpathref="BuildFacesLib"/>
-		
-        <BuildStatusChecker cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}" configname="${configname}"/>
+        <buildmaintain cithome="${cc.home}" projectname="TestWeb" buildstamp="${current.time}"/>
     </target>
       
  <!-- Ant custom plugin for Deploy -->
@@ -329,6 +312,4 @@
 			
 			<delete dir="${build}/com"/>
         </target>
-        
-       
 </project>
